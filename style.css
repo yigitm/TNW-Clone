@@ -61,6 +61,10 @@ body {
   background-color: #fd3;
 }
 
+.yellow-bar:hover {
+  cursor: pointer;
+}
+
 .yellow-bar p {
   text-align: center;
   line-height: 1.5rem;
@@ -99,6 +103,12 @@ section {
   background-position: center;
 }
 
+.mobile-cover-top:hover,
+.mobile-cover-mid:hover,
+.mobile-cover-bottom:hover {
+  cursor: pointer;
+}
+
 .mobile-cover-top {
   background-image: url(images/xbox.jpg);
 }
@@ -114,41 +124,201 @@ section {
 .mobile-head-tag {
   margin-top: 20vh;
   margin-bottom: -1vh;
+  font-family: "Roboto Mono", monospace;
 }
 
-.mobile-h2-tag {
+.mobile-h1-tag {
   margin-top: 2vh;
 }
 
 .mobile-sub-tag {
   margin-top: -1rem;
 }
-/* Section - Latest News */
-.mobile-news {
-  display: block;
-}
-
-.mobile-news h1 {
-  color: #ff4422;
-}
-
-figure {
+/* Section / Latest - Including Both Deals & News Styles */
+.mobile-latest {
   display: flex;
-  margin: 1rem 0;
+  flex-direction: column;
+  margin: 0 0;
+  padding: 0 -30px;
   width: 90%;
 }
 
-figure img {
-  width: 4rem;
-  height: 4rem;
+.mobile-latest h1 {
+  color: #ff4422;
 }
-figcaption {
+
+.mobile-latest h1:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.mobile-latest-head {
+  position: relative;
+  margin-right: 0.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.elon-img {
+  width: 15.5rem;
+  height: 6rem;
+  background-image: url(images/elon-musk.png);
+}
+
+.bounch-img {
+  width: 24.2rem;
+  height: 6rem;
+  background-image: url(images/bounch.jpeg);
+}
+
+.smedia-img {
+  width: 19rem;
+  height: 6rem;
+  background-image: url(images/social-media.jpeg);
+}
+
+.drive-img {
+  width: 21rem;
+  height: 6rem;
+  background-image: url(images/drive.png);
+}
+
+.world-img {
+  width: 21.4rem;
+  height: 6rem;
+  background-image: url(images/word.jpg);
+}
+
+.cosmic-img {
+  width: 25.2rem;
+  height: 6rem;
+  background-image: url(images/cosmic.png);
+}
+
+.android-img {
+  width: 19.1rem;
+  height: 6rem;
+  background-image: url(images/android.png);
+}
+
+.zukerberg-img {
+  width: 20.2rem;
+  height: 6rem;
+  background-image: url(images/zuckerberg.jpg);
+}
+
+.mobile-latest article {
   display: flex;
-  margin-left: 0.5rem;
-  flex-direction: column;
-  justify-content: space-evenly;
+  width: 99vw;
+  margin-bottom: 1rem;
 }
-/* Section - Latest Funding */
+
+.mobile-latest-text {
+  position: relative;
+  margin-top: -1.2rem;
+}
+
+.mobile-latest-text ul {
+  margin-left: -2.5rem;
+  margin-top: -1rem;
+}
+
+.mobile-latest-text ul li {
+  display: inline;
+  padding-right: 1rem;
+  font-size: 13px;
+  color: #555;
+}
+/* Section / Latest - Including Only Deals Styles */
+.mobile-deals-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.mobile-deals-head h5:hover {
+  cursor: pointer;
+  color: #000;
+}
+
+.mobile-deals-h5 {
+  font-family: sans-serif;
+  font-weight: lighter;
+  color: #ff4422;
+}
+
+.mobile-deals-line {
+  text-decoration: line-through;
+}
+
+.mobile-off-tag {
+  position: absolute;
+  width: 56%;
+  height: 55%;
+  left: 4.7rem;
+  bottom: 2.7rem;
+  margin-top: -1.6rem;
+}
+
+.mobile-off-text {
+  position: absolute;
+  width: 14%;
+  height: 14%;
+  left: 7.2rem;
+  top: -0.5rem;
+  font-size: 10px;
+}
+
+.management-img {
+  width: 15.4rem;
+  height: 6rem;
+  background-image: url(images/management.jpg);
+}
+
+.jumpstory-img {
+  width: 17.4rem;
+  height: 6rem;
+  background-image: url(images/jumpstory.jpg);
+}
+
+.itg-img {
+  width: 17.5rem;
+  height: 6rem;
+  background-image: url(images/itg.jpg);
+}
+
+.vpn-img {
+  width: 13.1rem;
+  height: 6rem;
+  background-image: url(images/vpn.jpg);
+}
+
+.excel-img {
+  width: 15.8rem;
+  height: 6rem;
+  background-image: url(images/excel.jpg);
+}
+
+.micro-img {
+  width: 15.8rem;
+  height: 6rem;
+  background-image: url(images/micro.jpg);
+}
+
+.slidebean-img {
+  width: 11.5rem;
+  height: 6rem;
+  background-image: url(images/slidebean.jpg);
+}
+
+.design-img {
+  width: 14.3rem;
+  height: 6rem;
+  background-image: url(images/design.jpg);
+}
+
+/* Section - Funding */
 .mobile-funding {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -257,7 +427,7 @@ figcaption {
 .mobile-invest-border span {
   color: #555;
 }
-/* Section - Apps */
+/* Section - Story */
 
 .mobile-story h2 {
   color: #ff4422;
@@ -355,4 +525,8 @@ figcaption {
 .mobile-story a {
   text-decoration: none;
   color: #555;
+}
+.mobile-sub-tag {
+  padding-bottom: 1rem;
+  font-size: 16px;
 }
