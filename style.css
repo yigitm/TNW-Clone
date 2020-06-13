@@ -1,7 +1,33 @@
 body {
   margin: 0;
   padding: 0;
-  background: pink;
+}
+
+main {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.thumbnails,
+.funding,
+.story {
+  max-width: 1100px;
+}
+
+.yellow-bar,
+.header-articles,
+.thumbnails,
+.funding,
+.story {
+  cursor: pointer;
+}
+
+.global-font {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.child-font {
+  font-family: "Roboto Mono";
 }
 
 .none-mobile {
@@ -14,18 +40,128 @@ body {
 
 nav {
   display: grid;
+  position: relative;
   grid-template-columns: 1fr;
-}
-
-.nav-sub {
-  padding: 2em;
-  background-color: rgb(209, 188, 188);
+  cursor: pointer;
 }
 
 .nav-top {
-  padding: 2em;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 2rem;
+  align-items: center;
+  justify-content: space-between;
   color: white;
   background-color: rgb(10, 10, 10);
+}
+
+.nav-top li:hover {
+  color: #eee;
+}
+
+.nav-top ul {
+  padding: 0;
+  margin: 1.1rem;
+  color: #555;
+}
+
+.nav-top ul li {
+  display: inline;
+  padding: 0 0.1rem;
+  list-style: none;
+  font-size: 12px;
+}
+
+.nav-top-active {
+  color: #eee;
+}
+
+.nav-top .fa-caret-down {
+  color: #555;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-items {
+  display: none;
+}
+
+.dropdown-list:hover .dropdown-items {
+  display: flex;
+  position: absolute;
+  top: -1px;
+  flex-direction: column;
+  width: 50%;
+  background-color: #000;
+}
+
+.nav-sub {
+  grid-column: 1 / span 3;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: #fff;
+}
+
+.nav-sub-logo {
+  display: block;
+  margin-left: -0.2rem;
+  padding: 1rem;
+  width: 4rem;
+  background-size: cover;
+  background-color: #f42;
+  background: linear-gradient(to bottom right, #c09, #f42 85%);
+}
+
+.nav-sub ul {
+  margin: 0;
+  padding: 0;
+  color: #555;
+}
+
+.nav-sub ul li {
+  display: inline;
+  padding: 0.84rem 1.2rem;
+  list-style: none;
+  list-style-position: outside;
+}
+
+.nav-sub ul li:hover {
+  font-weight: bolder;
+  color: #000;
+}
+
+.nav-sub img {
+  border-left: 1px solid #eee;
+}
+
+.search-icon,
+.red-bar-icon {
+  padding: 1rem;
+  height: 1rem;
+}
+
+.yellow-bar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  text-align: center;
+}
+
+.yellow-bar h5 {
+  margin: 0;
+  line-height: 3.75rem;
+  font-weight: lighter;
+  background: yellow;
+  background-size: cover;
 }
 
 .header-articles {
@@ -34,70 +170,231 @@ nav {
   grid-template-rows: 1fr 1fr;
 }
 
-.yellow-bar {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 100%;
-}
-
-.bar {
-  background-color: yellow;
+.cover,
+.side-up,
+.side-down {
+  color: #eee;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .cover {
-  grid-column: 1 / 4;
-  padding: 4em;
-  background-color: rgb(219, 71, 71);
+  grid-column: 1/ 4;
+  width: 100%;
+  height: auto;
+  background-image: url(images/astronauts.png);
 }
 
-.sides {
-  grid-column: 1 / 4;
-  background-color: rgb(232, 230, 240);
+.side-up {
+  grid-column: span 3;
+  background-image: url(images/shopify.jpg);
 }
 
-.side {
+.side-down {
   grid-column: span 3;
-  padding: 4em;
-  background-color: rgb(149, 137, 218);
+  background-image: url(images/designer.jpg);
 }
-.side-2 {
-  grid-column: span 3;
-  padding: 4em;
-  background-color: rgb(168, 206, 0);
+
+.cover,
+.side-up,
+.side-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.header-articles h2,
+.header-articles h5 {
+  color: #eee;
+}
+
+.header-articles > h5 > ul {
+  font-family: "Roboto Mono";
+}
+
+.header-articles h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.header-articles ul {
+  padding: 0;
+  margin-top: -0.5rem;
+  width: 100%;
+}
+
+.header-articles ul li {
+  display: inline;
+  list-style: none;
+}
+
+.latest-news-title h2,
+.latest-deals-title h2,
+.latest-deals-title h4,
+.funding-title {
+  color: #f42;
+}
+
+.latest-news-title,
+.latest-deals-title,
+.funding-title {
+  grid-column: span 12;
+}
+
+.latest-deals-title,
+.funding-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .thumbnails {
-  margin: auto;
   display: grid;
+  margin: 5rem auto;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   grid-auto-flow: row;
   grid-gap: 1rem;
+}
+
+.thumb-items {
+  display: block;
+  grid-column: span 12;
 }
 
 .thumb-item {
-  padding: 2rem;
-  grid-column: span 12;
-  background-color: grey;
+  display: block;
+  padding-top: 50%;
+  width: 100%;
+  height: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.thumbnails ul li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0 12px;
+}
+
+.thumbnails p {
+  color: #555;
+}
+
+.thumb-img-col-1 {
+  background-image: url(images/android.png);
+}
+
+.thumb-img-col-2 {
+  background-image: url(images/creative.jpg);
+}
+
+.thumb-img-col-3 {
+  background-image: url(images/elon-musk.png);
+}
+
+.thumb-img-col-4 {
+  background-image: url(images/jumpstory.jpg);
+}
+
+.thumb-img-col-5 {
+  background-image: url(images/cosmic.png);
+}
+
+.thumb-img-col-6 {
+  background-image: url(images/bitcoin.jpg);
+}
+
+.thumb-img-col-7 {
+  background-image: url(images/bicycle.jpg);
+}
+
+.thumb-img-col-8 {
+  background-image: url(images/algorithms.jpg);
 }
 
 .funding {
-  margin: 1rem auto;
   display: grid;
+  margin: auto;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
   grid-auto-flow: row;
   grid-gap: 1rem;
 }
 
+.funding-title ul {
+  padding: 0;
+}
+
+.funding-title ul li {
+  display: block;
+  list-style: none;
+  color: #f42;
+}
+
 .funding-item {
-  padding: 2rem;
+  display: block;
   grid-column: span 12;
-  background-color: rgb(209, 122, 198);
+}
+
+.funding-item img {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.funding-item-head {
+  display: flex;
+  color: #fff;
+  background: linear-gradient(#f42 50%, #f7c6d1 50%);
+}
+
+.funding-item-tags {
+  margin-left: 1rem;
+}
+
+.funding-item-tags p {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+}
+
+.funding-head-small {
+  font-size: 12px;
+}
+
+.funding-item-list {
+  padding: 1rem;
+  margin-top: -0.5rem;
+  min-height: 11rem;
+  background-color: #fcf4de;
+}
+
+.funding-item-list li {
+  padding-top: 0.5rem;
+  list-style: none;
+}
+
+.funding-list-item {
+  color: rgb(168, 165, 165);
+}
+
+.funding-list-line {
+  margin-top: 1.5rem;
+  border-top: 1px solid #f7c6d1;
+}
+
+.fas {
+  color: #000;
 }
 
 .story {
-  margin: 1rem auto;
+  margin: 5rem auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
@@ -106,29 +403,271 @@ nav {
 }
 
 .story-item {
-  padding: 2rem;
+  display: block;
+  height: 60%;
+  margin-bottom: 2px;
   grid-column: span 12;
-  background-color: rgb(44, 230, 100);
+  grid-row-gap: 12rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.story-item h2 {
+  color: #f42;
+}
+
+.story-head-list {
+  margin-left: -1rem;
+}
+
+.story-h4 {
+  font-size: 14px;
+}
+
+.story-items {
+  padding-top: 7rem;
+}
+
+.story-headers {
+  margin-bottom: -1rem;
+  margin-left: 1.5rem;
+}
+
+.story-head-list li {
+  display: inline;
+  list-style: none;
+  list-style-position: inside;
+  font-size: 12px;
+}
+
+.story-latest-tags {
+  margin-left: 1.5rem;
+}
+
+.story-head-bg,
+.story-latest-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.apps-head-img {
+  background-image: url(images/apps.png);
+}
+
+.gear-head-img {
+  background-image: url(images/xiaomi.jpg);
+}
+
+.tech-head-img {
+  background-image: url(images/nasa.jpg);
+}
+
+.creative-head-img {
+  background-image: url(images/creative.jpg);
+}
+
+.podium-head-img {
+  background-image: url(images/trans.png);
+}
+
+.insights-head-img {
+  background-image: url(images/tesla.jpg);
+}
+
+.launch-head-img {
+  background-image: url(images/facebook-phones.jpg);
+}
+
+.distract-head-img {
+  background-image: url(images/pokemon.jpg);
+}
+
+.story-latest {
+  display: flex;
+  margin-top: -0.9rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f8eaed;
+}
+
+.story-h4 {
+  margin: 0 0.5rem 0 0;
+  padding-bottom: 0;
+  color: #f42;
+}
+
+.story-latest-list {
+  display: block;
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 16px;
+}
+
+.story-latest-list li {
+  padding: 0.5rem 0;
+  margin-left: -2.5rem;
+  list-style: disc;
+  list-style-position: inside;
+  color: #f42;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.story-list-color {
+  text-decoration: none;
+  color: #555;
+}
+
+.apps-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/phones.png);
+}
+
+.gear-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/samsung.jpg);
+}
+
+.tech-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/ai.jpg);
+}
+
+.creative-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/css.png);
+}
+
+.podium-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/paris.jpg);
+}
+
+.insights-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/car.png);
+}
+
+.launch-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/whatsup.jpg);
+}
+
+.launch-latest-img {
+  padding: 3rem 3rem;
+  background-image: url(images/vangogh.png);
+}
+
+.latest-deals {
+  margin-top: 10rem;
+}
+
+.deals-img-col-1 {
+  background-image: url(images/drive.png);
+}
+
+.deals-img-col-2 {
+  background-image: url(images/jumpstory.jpg);
+}
+
+.deals-img-col-3 {
+  background-image: url(images/hero_img.png);
+}
+
+.deals-img-col-4 {
+  background-image: url(images/podium.jpg);
+}
+
+.deals-img-col-5 {
+  background-image: url(images/bounch.jpeg);
+}
+
+.deals-img-col-6 {
+  background-image: url(images/recharge.png);
+}
+
+.deals-img-col-7 {
+  background-image: url(images/stars.png);
+}
+
+.deals-img-col-8 {
+  background-image: url(images/trump.jpg);
 }
 
 footer {
-  margin: 1rem auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr;
+  cursor: pointer;
 }
 
 .footer-top,
 .footer-sub {
-  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   grid-column: span 12;
 }
 
 .footer-top {
-  background-color: rgb(81, 83, 82);
+  display: flex;
+  padding: 2rem 0;
+  flex-direction: column;
+  background-color: #131313;
+}
+
+.footer-top ul li,
+.footer-sub ul li {
+  display: inline;
+}
+
+.footer-top i {
+  color: #e6e6e6;
+}
+
+.social-media-icon {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  background-color: #333;
+  border: 1px solid #333;
+  border-radius: 100%;
+}
+
+.social-media-icon:hover {
+  padding: 0.5rem;
+  margin-right: 1rem;
+  background-color: #131313;
+  border-radius: 100%;
+}
+
+.footer-top-links li {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-top-links li:hover {
+  color: #eee;
 }
 
 .footer-sub {
-  color: white;
+  color: #aaa;
   background-color: rgb(2, 2, 2);
+}
+
+.footer-sub ul {
+  margin-left: 13rem;
+}
+
+.footer-sub img {
+  width: 5%;
+  margin-right: 0.2rem;
+}
+
+.heart {
+  color: #ee0a0a;
+}
+
+.stackpath {
+  color: #fff;
 }
