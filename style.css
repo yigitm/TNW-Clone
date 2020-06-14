@@ -179,6 +179,7 @@ nav {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  grid-gap: 0.5rem;
 }
 
 .cover,
@@ -191,20 +192,27 @@ nav {
 }
 
 .cover {
+  position: relative;
   grid-column: 1/ 4;
   width: 100%;
   height: auto;
-  background-image: url(images/astronauts.png);
+}
+
+.cover-bg-mobile {
+  background-image: linear-gradient(rgba(14, 13, 13, 0.6), rgba(0, 0, 0, 1)),
+    url(images/astronauts.png);
 }
 
 .side-up {
   grid-column: span 3;
-  background-image: url(images/shopify.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.6), rgba(0, 0, 0, 1)),
+    url(images/shopify.jpg);
 }
 
 .side-down {
   grid-column: span 3;
-  background-image: url(images/designer.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.6), rgba(0, 0, 0, 1)),
+    url(images/designer.jpg);
 }
 
 .cover,
@@ -212,11 +220,14 @@ nav {
 .side-down {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-end;
 }
 
 .header-articles h2,
 .header-articles h5 {
+  padding-top: -3rem;
+  margin-left: 1.1rem;
   color: #eee;
 }
 
@@ -225,13 +236,14 @@ nav {
 }
 
 .header-articles h2 {
+  margin-top: -1rem;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
 }
 
 .header-articles ul {
-  padding: 0;
-  margin-top: -0.5rem;
+  margin-top: -1.2rem;
+  margin-left: -1.3rem;
   width: 100%;
 }
 
@@ -438,6 +450,7 @@ nav {
 
 .story-items {
   padding-top: 7rem;
+  color: #e6e6e6;
 }
 
 .story-headers {
@@ -464,35 +477,43 @@ nav {
 }
 
 .apps-head-img {
-  background-image: url(images/apps.png);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.5)),
+    url(images/apps.png);
 }
 
 .gear-head-img {
-  background-image: url(images/xiaomi.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.8)),
+    url(images/xiaomi.jpg);
 }
 
 .tech-head-img {
-  background-image: url(images/nasa.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.8)),
+    url(images/nasa.jpg);
 }
 
 .creative-head-img {
-  background-image: url(images/creative.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.8)),
+    url(images/creative.jpg);
 }
 
 .podium-head-img {
-  background-image: url(images/trans.png);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.8)),
+    url(images/trans.png);
 }
 
 .insights-head-img {
-  background-image: url(images/tesla.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.8)),
+    url(images/tesla.jpg);
 }
 
 .launch-head-img {
-  background-image: url(images/facebook-phones.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.8)),
+    url(images/facebook-phones.jpg);
 }
 
 .distract-head-img {
-  background-image: url(images/pokemon.jpg);
+  background-image: linear-gradient(rgba(14, 13, 13, 0.1), rgba(0, 0, 0, 0.8)),
+    url(images/pokemon.jpg);
 }
 
 .story-latest {
@@ -562,12 +583,12 @@ nav {
 
 .launch-latest-img {
   padding: 3rem 3rem;
-  background-image: url(images/whatsup.jpg);
+  background-image: url(images/vangogh.png);
 }
 
-.launch-latest-img {
+.distract-latest-img {
   padding: 3rem 3rem;
-  background-image: url(images/vangogh.png);
+  background-image: url(images/whatsup.jpg);
 }
 
 .latest-deals {
@@ -684,15 +705,21 @@ footer {
   color: #fff;
 }
 
-.fa-wheelchair {
-  left: 60rem;
-}
-
 .accessibility {
   position: fixed;
   right: 0;
   bottom: 1rem;
   margin-right: 1rem;
-  width: 3%;
+  width: 4%;
+  cursor: pointer;
+}
+
+.accessibility-mobile {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: -0.6rem;
+  margin-bottom: -0.2rem;
+  width: 10%;
   cursor: pointer;
 }

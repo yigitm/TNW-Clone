@@ -19,8 +19,21 @@
     margin-left: -5.2rem;
   }
 
-  .cover {
+  .cover-bg-1024 {
     height: 30rem;
+    background-image: linear-gradient(
+        160deg,
+        rgba(255, 0, 0, 1),
+        rgba(92, 53, 9, 0.6),
+        rgba(0, 0, 0, 0.8)
+      ),
+      url(images/astronauts.png);
+  }
+
+  .cover-bg-1024 img {
+    width: 50%;
+    margin-left: 1rem;
+    margin-bottom: 8rem;
   }
 
   .thumbnails .thumb-items,
@@ -96,6 +109,10 @@
   .cover {
     grid-column: 1 / span 2;
     grid-row: span 2;
+  }
+
+  .cover-bg-1024 h2 {
+    font-size: 50px;
   }
 
   .side-up {
