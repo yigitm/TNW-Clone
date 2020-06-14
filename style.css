@@ -154,14 +154,14 @@ nav {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   text-align: center;
+  background: yellow;
+  background-size: cover;
 }
 
 .yellow-bar h5 {
   margin: 0;
   line-height: 3.75rem;
   font-weight: lighter;
-  background: yellow;
-  background-size: cover;
 }
 
 .header-articles {
