@@ -93,8 +93,10 @@ nav {
   display: flex;
   position: absolute;
   top: -1px;
+  padding: 0;
+  width: 41%;
+  z-index: 1;
   flex-direction: column;
-  width: 50%;
   background-color: #000;
 }
 
@@ -608,11 +610,10 @@ footer {
   align-items: center;
   justify-content: center;
   grid-column: span 12;
+  padding: 2rem 0;
 }
 
 .footer-top {
-  display: flex;
-  padding: 2rem 0;
   flex-direction: column;
   background-color: #131313;
 }
@@ -656,11 +657,13 @@ footer {
 }
 
 .footer-sub ul {
-  margin-left: 13rem;
+  width: 30%;
+  text-align: center;
+  font-size: 90%;
 }
 
 .footer-sub img {
-  width: 5%;
+  width: 3rem;
   margin-right: 0.2rem;
 }
 

@@ -114,4 +114,10 @@
   .story-item {
     grid-column: span 6;
   }
+
+  .footer-sub ul {
+    width: 75%;
+    text-align: center;
+    font-size: 90%;
+  }
 }
