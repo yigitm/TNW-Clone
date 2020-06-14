@@ -8,6 +8,31 @@ main {
   margin-right: 0.5rem;
 }
 
+.none-mobile {
+  display: none;
+}
+
+.desktop {
+  display: none;
+}
+
+.global-font {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.child-font {
+  font-family: "Roboto Mono";
+}
+
+.global-black-hover:hover {
+  color: #000;
+}
+
+.global-red-hover:hover {
+  text-decoration: underline;
+  color: #f42;
+}
+
 .thumbnails,
 .funding,
 .story {
@@ -20,22 +45,6 @@ main {
 .funding,
 .story {
   cursor: pointer;
-}
-
-.global-font {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.child-font {
-  font-family: "Roboto Mono";
-}
-
-.none-mobile {
-  display: none;
-}
-
-.desktop {
-  display: none;
 }
 
 nav {
@@ -662,7 +671,7 @@ footer {
   font-size: 90%;
 }
 
-.footer-sub img {
+.footer-sub-logo {
   width: 3rem;
   margin-right: 0.2rem;
 }
@@ -673,4 +682,17 @@ footer {
 
 .stackpath {
   color: #fff;
+}
+
+.fa-wheelchair {
+  left: 60rem;
+}
+
+.accessibility {
+  position: fixed;
+  right: 0;
+  bottom: 1rem;
+  margin-right: 1rem;
+  width: 3%;
+  cursor: pointer;
 }
